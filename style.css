@@ -4,22 +4,22 @@
 
 body {
     height: 100vh;
-    background-color: #9285bb;
+    background-color: #00586e;
     color: #333;
     font-family: 'Roboto', sans-serif;
     text-align: center;
     letter-spacing: 0.15em;
-    font-size: 22px;
+    font-size: 1rem;
 }
 
 .wrapper {
+    background-color: rgb(80, 122, 122);
     position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 50%;
-    height: 50%;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, .2);
+    width: 60%;
+    height: 60%;
 }
 
 .slider {
@@ -33,12 +33,12 @@ body {
 .slides {
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    height: inherit;
+    height: 100%;
     position: absolute;
-    width: inherit;
+    width: 100%;
 }
 
-.wrapper>input {
+input {
     display: none;
 }
 
@@ -62,46 +62,35 @@ body {
     background-image: url(assets/5.jpg);
 }
 
-.wrapper .controls {
-    left: 50%;
-    margin-left: -98px;
+.controls {
+    left: 40%;
     position: absolute;
 }
 
-.wrapper label {
-    cursor: pointer;
-    display: inline-block;
-    height: 8px;
-    margin: 25px 12px 0 16px;
-    position: relative;
-    width: 8px;
-    border-radius: 50%;
-}
-
-.wrapper label:after {
+label:after {
     border: 2px solid #ddd;
     content: " ";
     display: block;
-    height: 12px;
+    height: 0.5rem;
     left: -4px;
     position: absolute;
     top: -4px;
-    width: 12px;
+    width: 0.5rem;
     border-radius: 50%;
 }
 
-.wrapper label {
+label {
     cursor: pointer;
     display: inline-block;
-    height: 8px;
+    height: 0.5rem;
     margin: 25px 12px 0 16px;
     position: relative;
-    width: 8px;
+    width: 0.5rem;
     border-radius: 50%;
     transition: background ease-in-out .5s;
 }
 
-.wrapper label:hover,
+label:hover,
 #slide1:checked~.controls label:nth-of-type(1),
 #slide2:checked~.controls label:nth-of-type(2),
 #slide3:checked~.controls label:nth-of-type(3),
@@ -111,18 +100,11 @@ body {
 }
 
 .slides {
-    height: inherit;
+    height: 100%;
     opacity: 0;
     position: absolute;
-    width: inherit;
+    width: 100%;
     z-index: 0;
-    -webkit-transform: scale(1.5);
-    -moz-transform: scale(1.5);
-    -o-transform: scale(1.5);
-    transform: scale(1.5);
-    -webkit-transition: transform ease-in-out .5s, opacity ease-in-out .5s;
-    -moz-transition: transform ease-in-out .5s, opacity ease-in-out .5s;
-    -o-transition: transform ease-in-out .5s, opacity ease-in-out .5s;
     transition: transform ease-in-out .5s, opacity ease-in-out .5s;
 }
 
@@ -133,5 +115,4 @@ body {
 #slide5:checked~.slider>.slide5 {
     opacity: 1;
     z-index: 1;
-    transform: scale(1);
 }
